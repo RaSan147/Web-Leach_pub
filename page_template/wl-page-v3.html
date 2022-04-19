@@ -2490,11 +2490,14 @@ window.onscroll = function () {
         return false;
     }
 
-    if (top_bar.prevScrollpos > currentScrollPos) {
+    
+    if (top_bar.prevScrollpos > currentScrollPos+10) {
         top_bar.show()
-    } else {
+    } 
+    if (top_bar.prevScrollpos < currentScrollPos-10) {
         top_bar.hide()
     }
+    
     top_bar.prevScrollpos = currentScrollPos;
 }
 
